@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        Button("点击我") {
+            print("点击事件")
+            print("\n")
+            printHellow();
+            print("\n")
+            let person = create();
+            printPersonInfo(person);
+            
+        }.frame(width: 500, height: 400, alignment: Alignment.center)
     }
 }
 

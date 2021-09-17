@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880F305626F45C5600BAC573 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 880F305526F45C5600BAC573 /* CModel.c */; };
+		880F305926F45DA100BAC573 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880F305726F45DA100BAC573 /* CPPerson.cpp */; };
 		88D1B57426DFEF470072512C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1B57326DFEF470072512C /* AppDelegate.swift */; };
 		88D1B57626DFEF470072512C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1B57526DFEF470072512C /* ContentView.swift */; };
 		88D1B57826DFEF490072512C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D1B57726DFEF490072512C /* Assets.xcassets */; };
@@ -15,6 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880F305326F45C5600BAC573 /* MyPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		880F305426F45C5600BAC573 /* CModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CModel.h; sourceTree = "<group>"; };
+		880F305526F45C5600BAC573 /* CModel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CModel.c; sourceTree = "<group>"; };
+		880F305726F45DA100BAC573 /* CPPerson.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPPerson.cpp; sourceTree = "<group>"; };
+		880F305826F45DA100BAC573 /* CPPerson.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPPerson.hpp; sourceTree = "<group>"; };
 		88D1B57026DFEF470072512C /* MyPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D1B57326DFEF470072512C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88D1B57526DFEF470072512C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +69,11 @@
 				88D1B57F26DFEF490072512C /* Info.plist */,
 				88D1B58026DFEF490072512C /* MyPlayer.entitlements */,
 				88D1B57926DFEF490072512C /* Preview Content */,
+				880F305426F45C5600BAC573 /* CModel.h */,
+				880F305526F45C5600BAC573 /* CModel.c */,
+				880F305326F45C5600BAC573 /* MyPlayer-Bridging-Header.h */,
+				880F305726F45DA100BAC573 /* CPPerson.cpp */,
+				880F305826F45DA100BAC573 /* CPPerson.hpp */,
 			);
 			path = MyPlayer;
 			sourceTree = "<group>";
@@ -105,6 +117,7 @@
 				TargetAttributes = {
 					88D1B56F26DFEF470072512C = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -146,6 +159,8 @@
 			files = (
 				88D1B57626DFEF470072512C /* ContentView.swift in Sources */,
 				88D1B57426DFEF470072512C /* AppDelegate.swift in Sources */,
+				880F305626F45C5600BAC573 /* CModel.c in Sources */,
+				880F305926F45DA100BAC573 /* CPPerson.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPlayer/MyPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -298,6 +314,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq.player.MyPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPlayer/MyPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -307,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPlayer/MyPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -322,6 +341,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq.player.MyPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPlayer/MyPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
