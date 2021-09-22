@@ -12,15 +12,14 @@ struct ContentView: View {
         Button("点击我") {
             print("点击事件")
             print("\n")
-            printHellow();
+            printHellow()
             print("\n")
-            let person = create();
-            printPersonInfo(person);
-            
+            let person = create()
+            printPersonInfo(person)
+
         }.frame(width: 500, height: 400, alignment: Alignment.center)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

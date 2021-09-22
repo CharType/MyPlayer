@@ -11,6 +11,7 @@
 		880F305926F45DA100BAC573 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880F305726F45DA100BAC573 /* CPPerson.cpp */; };
 		8878FBD426FB1C14000070AE /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8878FBCB26FB1BEB000070AE /* libSDL2-2.0.0.dylib */; };
 		8878FBD526FB1C14000070AE /* libSDL2-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8878FBCB26FB1BEB000070AE /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8878FBDB26FB1DC2000070AE /* playthread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8878FBD926FB1DC2000070AE /* playthread.cpp */; };
 		88D1B57426DFEF470072512C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1B57326DFEF470072512C /* AppDelegate.swift */; };
 		88D1B57626DFEF470072512C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1B57526DFEF470072512C /* ContentView.swift */; };
 		88D1B57826DFEF490072512C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D1B57726DFEF490072512C /* Assets.xcassets */; };
@@ -220,6 +221,8 @@
 		8878FBCF26FB1BEB000070AE /* libSDL2_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDL2_test.a; sourceTree = "<group>"; };
 		8878FBD026FB1BEB000070AE /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		8878FBD326FB1BEB000070AE /* sdl2.m4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = sdl2.m4; sourceTree = "<group>"; };
+		8878FBD926FB1DC2000070AE /* playthread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playthread.cpp; sourceTree = "<group>"; };
+		8878FBDA26FB1DC2000070AE /* playthread.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = playthread.hpp; sourceTree = "<group>"; };
 		88D1B57026DFEF470072512C /* MyPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D1B57326DFEF470072512C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88D1B57526DFEF470072512C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -623,6 +626,8 @@
 		8878FBD826FB1D7B000070AE /* SDLPlayerAudio */ = {
 			isa = PBXGroup;
 			children = (
+				8878FBD926FB1DC2000070AE /* playthread.cpp */,
+				8878FBDA26FB1DC2000070AE /* playthread.hpp */,
 			);
 			path = SDLPlayerAudio;
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8878FBDB26FB1DC2000070AE /* playthread.cpp in Sources */,
 				88D1B57626DFEF470072512C /* ContentView.swift in Sources */,
 				88D1B57426DFEF470072512C /* AppDelegate.swift in Sources */,
 				880F305626F45C5600BAC573 /* CModel.c in Sources */,
