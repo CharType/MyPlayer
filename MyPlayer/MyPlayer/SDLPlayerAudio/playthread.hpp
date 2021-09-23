@@ -5,6 +5,8 @@
 //  Created by 程倩的MacBook on 2021/9/22.
 //
 
+
+
 #ifndef playthread_hpp
 #define playthread_hpp
 
@@ -12,4 +14,10 @@
 #endif /* playthread_hpp */
 #include <fstream>
 #include <iostream>
-using namespace std;
+class PlayerThread {
+public:
+    void run();
+    ~PlayerThread();
+};
+
+//void player();

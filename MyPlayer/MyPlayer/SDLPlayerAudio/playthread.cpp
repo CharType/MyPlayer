@@ -7,7 +7,9 @@
 
 #include "playthread.hpp"
 #include "SDL.h"
+#include "MyPlayer-Bridging-Header.h"
 
+using namespace std;
 #define FILENAME "/Users/chartype/Desktop/ypsc/in.pcm"
 #define SAMPLE_RATE 48000
 #define SAMPLE_SIZE 16
@@ -39,7 +41,7 @@ void pull_audio_data(void *userdata,Uint8 *stream,int len) {
 	buffer->len -= buffer->pullLen;
 }
 
-void run(){
+void PlayerThread::run(){
 	// 初始化子系统
 	if(SDL_Init(SDL_INIT_AUDIO)) {
 		cout << "SDL_Init error" << SDL_GetError();
@@ -66,10 +68,10 @@ void run(){
 		SDL_Quit();
 	}
 	// 4.打开文件
-	ifstream stream (FILENAME);
+	ifstream stream;
 	stream.open(FILENAME,ios::in);
 	if(!stream.is_open()) {
-		cout << "file.open error" << FILENAME;
+        cout << "file.open error" << FILENAME << endl;
 		// 关闭设备
 		SDL_CloseAudio();
 		// 关闭所有子系统
@@ -99,4 +101,13 @@ void run(){
 	SDL_CloseAudio();
 	// 9.清除所有的子系统
 	SDL_Quit();
+}
+
+PlayerThread::~PlayerThread(){
+    cout << "对象被释放" << endl;
+}
+
+void player() {
+    PlayerThread *thread = new PlayerThread();
+    thread->run();
 }

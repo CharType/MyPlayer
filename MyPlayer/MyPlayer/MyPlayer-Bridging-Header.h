@@ -10,6 +10,10 @@ extern "C" {
 void printHellow(void);
 int getRandomInt(void);
 
+
+void player();
+
+//Demo测试
 CPersonModel create();
 CPersonModel createBy(const char* name,int age);
 void printPersonInfo(CPersonModel model);

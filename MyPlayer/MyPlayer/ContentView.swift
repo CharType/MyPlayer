@@ -16,7 +16,7 @@ struct ContentView: View {
             print("\n")
             let person = create()
             printPersonInfo(person)
-
+            player()
         }.frame(width: 500, height: 400, alignment: Alignment.center)
     }
 }
