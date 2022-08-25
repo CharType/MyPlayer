@@ -6,7 +6,7 @@
 //
 
 #include "playthread.hpp"
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "MyPlayer-Bridging-Header.h"
 #include <stdio.h>
 #include <iostream>
