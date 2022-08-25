@@ -10,10 +10,10 @@
 #ifndef playthread_hpp
 #define playthread_hpp
 
-#include <stdio.h>
+//#include <stdio.h>
 #endif /* playthread_hpp */
-#include <fstream>
-#include <iostream>
+//#include <fstream>
+//#include <iostream>
 class PlayerThread {
 public:
     void run();

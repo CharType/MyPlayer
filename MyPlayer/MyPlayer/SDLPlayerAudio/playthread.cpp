@@ -8,6 +8,10 @@
 #include "playthread.hpp"
 #include "SDL.h"
 #include "MyPlayer-Bridging-Header.h"
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+#include <fstream>
 
 using namespace std;
 #define FILENAME "/Users/chartype/Desktop/ypsc/in.pcm"
@@ -69,8 +73,8 @@ void PlayerThread::run(){
 	}
 	// 4.打开文件
 	ifstream stream;
-	stream.open(FILENAME,ios::in);
-	if(!stream.is_open()) {
+	stream.open("/Users/chartype/Desktop/ypsc/in.pcm");
+	if(stream.is_open() == false) {
         cout << "file.open error" << FILENAME << endl;
 		// 关闭设备
 		SDL_CloseAudio();
@@ -82,12 +86,13 @@ void PlayerThread::run(){
 	SDL_PauseAudio(0);
 	// 6.从文件中读取数据
 	Uint8 data[BUFFER_SIZE];
-	while (!stream.eof()) {
+	while (true) {
 		if (buffer.len > 0) {
 			continue;
 		}
-        stream.read((char *)&data, sizeof(data));
-        buffer.len = (int)stream.gcount();
+        
+        buffer.len = (int)stream.read((char *)data, BUFFER_SIZE).gcount();
+        buffer.len = BUFFER_SIZE;
 		if (buffer.len <= 0) {
 			break;
 		}
