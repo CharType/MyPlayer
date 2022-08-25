@@ -978,6 +978,7 @@
 				DEVELOPMENT_TEAM = AH2S7JJ8V8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MyPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -985,7 +986,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/ffmpeg/bin,
-					/usr/local/Cellar/sdl2/2.0.14_1/lib,
+					/opt/homebrew/Cellar/sdl2/2.0.20/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq.player.MyPlayer;
@@ -993,7 +994,10 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlayer/MyPlayer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				USER_HEADER_SEARCH_PATHS = /usr/local/ffmpeg/include;
+				USER_HEADER_SEARCH_PATHS = (
+					/usr/local/ffmpeg/include,
+					/opt/homebrew/Cellar/sdl2/2.0.20/include/SDL2,
+				);
 			};
 			name = Debug;
 		};
@@ -1017,14 +1021,17 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/ffmpeg/bin,
-					/usr/local/Cellar/sdl2/2.0.14_1/lib,
+					/opt/homebrew/Cellar/sdl2/2.0.20/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq.player.MyPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlayer/MyPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				USER_HEADER_SEARCH_PATHS = /usr/local/ffmpeg/include;
+				USER_HEADER_SEARCH_PATHS = (
+					/usr/local/ffmpeg/include,
+					/opt/homebrew/Cellar/sdl2/2.0.20/include/SDL2,
+				);
 			};
 			name = Release;
 		};

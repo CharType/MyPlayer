@@ -14,7 +14,7 @@
 #include <fstream>
 
 using namespace std;
-#define FILENAME "/Users/chartype/Desktop/ypsc/in.pcm"
+#define FILENAME "/Users/chengqian/Desktop/ypsc/in.pcm"
 #define SAMPLE_RATE 48000
 #define SAMPLE_SIZE 16
 #define CHANNELS 2

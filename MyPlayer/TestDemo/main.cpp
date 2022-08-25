@@ -14,9 +14,9 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     ifstream stream;
-    stream.open("/Users/chartype/Desktop/ypsc/in.pcm");
+    stream.open("/Users/chengqian/Desktop/ypsc/in.pcm");
     if(stream.is_open() == false) {
-        cout << "file.open error" << "/Users/chartype/Desktop/ypsc/in.pcm" << endl;
+        cout << "file.open error" << "/Users/chengqian/Desktop/ypsc/in.pcm" << endl;
         return 0;
     }
     cout << "success" << endl;
