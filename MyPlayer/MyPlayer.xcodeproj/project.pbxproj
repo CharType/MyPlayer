@@ -10,8 +10,6 @@
 		880F305626F45C5600BAC573 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 880F305526F45C5600BAC573 /* CModel.c */; };
 		880F305926F45DA100BAC573 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 880F305726F45DA100BAC573 /* CPPerson.cpp */; };
 		882E016828B7DA2700F26185 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882E016728B7DA2700F26185 /* main.cpp */; };
-		8878FBD426FB1C14000070AE /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8878FBCB26FB1BEB000070AE /* libSDL2-2.0.0.dylib */; };
-		8878FBD526FB1C14000070AE /* libSDL2-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8878FBCB26FB1BEB000070AE /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8878FBDB26FB1DC2000070AE /* playthread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8878FBD926FB1DC2000070AE /* playthread.cpp */; };
 		88D1B57426DFEF470072512C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1B57326DFEF470072512C /* AppDelegate.swift */; };
 		88D1B57626DFEF470072512C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1B57526DFEF470072512C /* ContentView.swift */; };
@@ -29,17 +27,6 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
-		};
-		8878FBD626FB1C14000070AE /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8878FBD526FB1C14000070AE /* libSDL2-2.0.0.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -257,7 +244,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8878FBD426FB1C14000070AE /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,7 +716,6 @@
 				88D1B56C26DFEF470072512C /* Sources */,
 				88D1B56D26DFEF470072512C /* Frameworks */,
 				88D1B56E26DFEF470072512C /* Resources */,
-				8878FBD626FB1C14000070AE /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -972,32 +957,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPlayer/MyPlayer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MyPlayer/Preview Content\"";
 				DEVELOPMENT_TEAM = AH2S7JJ8V8;
 				ENABLE_HARDENED_RUNTIME = YES;
+                HEADER_SEARCH_PATHS = "";
 				ENABLE_PREVIEWS = YES;
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MyPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/ffmpeg/bin,
-					/opt/homebrew/Cellar/sdl2/2.0.20/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/sdl2/2.0.20/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq.player.MyPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlayer/MyPlayer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				USER_HEADER_SEARCH_PATHS = (
-					/usr/local/ffmpeg/include,
-					/opt/homebrew/Cellar/sdl2/2.0.20/include,
-				);
+				USER_HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/sdl2/2.0.20/include;
 			};
 			name = Debug;
 		};
@@ -1019,19 +999,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/ffmpeg/bin,
-					/opt/homebrew/Cellar/sdl2/2.0.20/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/sdl2/2.0.20/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq.player.MyPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyPlayer/MyPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				USER_HEADER_SEARCH_PATHS = (
-					/usr/local/ffmpeg/include,
-					/opt/homebrew/Cellar/sdl2/2.0.20/include,
-				);
+				USER_HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/sdl2/2.0.20/include;
 			};
 			name = Release;
 		};
